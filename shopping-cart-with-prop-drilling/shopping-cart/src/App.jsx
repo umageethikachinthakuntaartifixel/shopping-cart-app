@@ -16,19 +16,13 @@ function App() {
       ? JSON.parse(savedCart)
       : [];
   });
-
-
   // save localStorage
-
   useEffect(() => {
     localStorage.setItem(
       "cart",
       JSON.stringify(cart)
     );
   }, [cart]);
-
-
-
   // add item
   function addToCart(product) {
     let found = false;
@@ -50,11 +44,7 @@ function App() {
     }
     setCart(updatedCart);
   }
-
-
-
   // increase
-
   function increase(id) {
     let updatedCart = cart.map((item) => {
       if (item.id === id) {
@@ -67,9 +57,7 @@ function App() {
     });
     setCart(updatedCart);
   }
-
   // decrease
-
   function decrease(id) {
     let updatedCart = cart.map((item) => {
       if (item.id === id) {
@@ -85,7 +73,6 @@ function App() {
     });
     setCart(updatedCart);
   }
-
   // remove item
   function removeItem(id) {
     let updatedCart = cart.filter((item) => {
@@ -93,7 +80,6 @@ function App() {
     });
     setCart(updatedCart);
   }
-
   // total items
   let totalItems = 0;
   cart.forEach((item) => {

@@ -4,13 +4,11 @@ const products = [
     name: "Laptop",
     price: 50000,
   },
-
   {
     id: 2,
     name: "Mobile",
     price: 20000,
   },
-
   {
     id: 3,
     name: "Keyboard",
@@ -37,5 +35,4 @@ const products = [
     price: 7000,  
     }
 ];
-
 export default products;
